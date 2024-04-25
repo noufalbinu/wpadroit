@@ -122,6 +122,7 @@ svg.love {
     justify-items: center;
     justify-content: center;
     grid-gap: 10px;
+    padding-bottom: 58px;
 }
 
 .get-it-now-wrap p {
@@ -147,29 +148,36 @@ span.s-block i {
     height: 200px;
     background: #e5ece4;
     position:relative;
+    width: 100%;
 }
 .trio:before {
-    content: url(../img/after-before.svg);
-    height:20px;
+    content: "";
+    background-image: url('../img/after-before.png');
+    background-size: 100% 48px;
+    background-repeat: no-repeat;
+    height: 48px;
+    display: inline-block;
     width: 100%;
     position:absolute;
-    top:0px;
-    right:10%;
-    border-radius: 0 20px 20px 0;
-    rotate: 180deg;
+    top: -45px;
+    left: 0;
+    z-index: 5555555555555555555555;
 }
 .trio:after {
-     url("data:image/svg+xml; utf8, <svg ... code here</svg>");
-    height:20px;
-    width:10%;
-    background:#ffffff;
+    content: "";
+    background-image: url('../img/after-before.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 64%;
+    display: inline-block;
+    width: 100%;
     position:absolute;
-    bottom:0px;
-    left:10%;
-    border-radius: 20px 20px 0; 
-    rotate: 90deg;
-    
+    bottom: -112px;
+    left: 0;
+    z-index: 5555555555555555555555;
+    rotate: 180deg;
 }
+
 
 .resources {
     overflow: auto;

@@ -44,6 +44,8 @@ p.notification-nav a {
 }
 header {
 	background: #ffffff;
+	position: relative;
+	z-index: 5555;
 	}
 .header-wrap {
     height: 78px;
