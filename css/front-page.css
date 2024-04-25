@@ -4,13 +4,17 @@ a.nav-link {
 }
 
 .main-banner-wrap {
-    background: #f2fafb;
+    background: #ffffff;
 }
 .main-banner {
     display: flex;
     width: 1100px;
     margin: 0 auto;
     padding: 74px 0;
+}
+.search-window-svg {
+    width: 300px;
+    height: auto;
 }
 .text-content h1 {
     color: #1b4854;
@@ -98,8 +102,7 @@ svg.love {
     box-shadow: 4px 4px 6px -2px #3e3e3e;
 }
 .get-it-now {
-    background: #0b6e89;
-    
+    background: #163d3c;
 }
 .get-it-now-wrap {
     display: grid;

@@ -1,5 +1,7 @@
 footer.footer {
     background: #ecf3f5;
+    display: flex;
+    flex-direction: column;
 }
 
 div#footer-container {padding: 28px 0;}

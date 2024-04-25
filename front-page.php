@@ -6,7 +6,7 @@
     <div class="main-banner-wrap">
         <div class="main-banner container-width-1100">
             <div class="text-content">
-                <h1>Where Innovation Fuses with Design to Breathe Life into Your WordPress Experience!</h1>
+                <h1>Helping You make <br>stay alive online world & grow up</h1>
                 <p>At WPadroit, we embody a dynamic and creative spirit, boasting a team of developers and designers who are genuinely passionate about curating extraordinary themes and plugins. Our mission is to transcend the ordinary and elevate your online presence to new heights.
                     Dedicated to delivering excellence in quality and user experience, we specialize in the art of WordPress theme and plugin development. Our goal is not merely to make your website functional, but to make it a visually stunning masterpiece that captivates and engages your audience.
                     Step into the realm of WPadroit, where your WordPress journey becomes a seamless blend of innovation and design, transforming your digital presence into a work of art.
@@ -67,7 +67,7 @@
                          </div>
  
                         <?php endwhile; wp_reset_postdata(); endif;?>
-                    </div>
+                    </div>   
                 </div>
             </div>
         </div>
