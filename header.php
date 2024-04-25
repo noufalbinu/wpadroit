@@ -29,12 +29,7 @@
     <!----- JS ------>	
 </head>
 <body>
-	<div class="header-outer-nav ">
-	    <div class="outer-nav-wrap container-width-1100">
-			<p class="notification-nav">
-Looking to get more wordpress website traffic? Allwpseo provides strategies for SEO : <a href="https://allwpseo.com">Drive more traffic now</a></p>
-        </div>
-    </div>
+
     <header>
 	    <div class="header-wrap container-width-1100">
             <div class="logo">
@@ -87,7 +82,7 @@ Looking to get more wordpress website traffic? Allwpseo provides strategies for 
 		            		</ul>
 		            	</li>
 						<li class="nav-item">
-		            		<a href="#" class="nav-link">Contact</a>
+		            		<a href="#" class="nav-link">Contact  </a>
 		            	</li>			
 		            </ul>
 		    		<div class="navbar-utils">
