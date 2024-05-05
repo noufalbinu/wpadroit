@@ -6,7 +6,7 @@
 /** CLEAR FIX END ****/
  html {
 	 font-size: 100%;
-	 font-family: "Nunito", Arial, sans-serif;
+	 font-family: "Manrope", sans-serif;
 	 font-weight: normal;
 	 line-height: 1.5;
 	 -webkit-font-smoothing: antialiased;
@@ -157,7 +157,6 @@ svg.search-icon {
     width: 30px;
     height: 30px;
     visibility: visible;
-    fill: #fbb03b;
 }
 #search-form .close-icon-small {
     visibility: hidden;

@@ -20,8 +20,9 @@
     <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2?styles=54222,54221" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,700&family=Lato:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
 
     <!----- JS ------>	
     <?php wp_enqueue_script('jquery'); ?>

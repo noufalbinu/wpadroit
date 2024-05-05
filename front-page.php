@@ -9,9 +9,12 @@
                 <h1>Helping You make <br>stay alive online world & grow up</h1>
                 <p>At WPadroit, we embody a dynamic and creative spirit, boasting a team of developers and designers who are genuinely passionate about curating extraordinary themes and plugins.
                 </p>
-                <a class="cta cta-banner-fp" href="https://crunchthemes.com">Services</a>
+                <div class="cta-container-banner">
+                    <a class="cta cta-banner-fp" href="https://crunchthemes.com">Services</a>
+                    <a class="cta cta-border-solid-fp" href="https://crunchthemes.com">Products</a>
+                </div>
             </div>
-            <div class="column"></div>
+            <div class="column"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bnr.png" alt=""></div>
         </div>
     </div>
     <div class="service-blocks">
@@ -58,7 +61,7 @@
                         </div>
                     </div>
                     <div class='sc'>
-                         <?php $args = array( 'posts_per_page' => 5, 'order' => 'DESC' );
+                         <?php $args = array( 'posts_per_page' => 3, 'order' => 'DESC' );
                          $rp = new WP_Query( $args );
                          if($rp->have_posts()) :
                          while($rp->have_posts()) : $rp->the_post(); ?>
