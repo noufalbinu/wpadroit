@@ -12,6 +12,8 @@ include 'inc/landing_page_setup.php';
 add_theme_support( 'title-tag' );
 
 
+
+
 function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 

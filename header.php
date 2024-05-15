@@ -34,7 +34,7 @@
     <header>
 	    <div class="header-wrap container-width-1100">
             <div class="logo">
-               <a class="link-secondary" href="#">
+               <a class="link-secondary" href="<?php echo home_url();?>">
                   <img src="<?php header_image(); ?>" >
                </a>
             </div>

@@ -14,7 +14,7 @@
                     <a class="cta cta-border-solid-fp" href="https://crunchthemes.com">Products</a>
                 </div>
             </div>
-            <div class="column"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bnr.png" alt=""></div>
+            <div class="bnr-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bnr.png" alt=""></div>
         </div>
     </div>
     <div class="service-blocks">
