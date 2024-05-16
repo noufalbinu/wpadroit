@@ -19,7 +19,6 @@
 </style>
 
 <?php
-
     $data = get_post_meta( $post->ID, '_zonpackk_testimonial_key', true );
 
     $p1 = isset($data['p1']) ? $data['p1'] : '';
@@ -77,7 +76,7 @@
 $uploads = wp_upload_dir();
 $target_dir = wp_basename($uploads['baseurl'])."yyyyy";
 
-    $target_dir = "uploads/";
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["cv"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -117,7 +116,8 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
-} else {
+} 
+else {
   if (move_uploaded_file($_FILES["cv"]["tmp_name"], $target_file)) {
     echo "The file ". htmlspecialchars( basename( $_FILES["cv"]["name"])). " has been uploaded.";
   } else {
@@ -244,12 +244,6 @@ switch ($dataoption) {
         echo "Package Not Selected";
 }
 
-
-
-
-
-
-
 ?>
 
 
@@ -280,7 +274,11 @@ switch ($dataoption) {
   </div>
   
   <!-------file-upload------->
-  <input type="file" name="cv" id="cv">
+
+
+
+  <input type="file" name="fileupload" id="fileupload">
+  <button id="upload-button" onclick="saveFile()">Upload</button>
 
   <div class="field-container">
     <input type="submit"  id="btn-razorpay" class="btn"  name="submit" value='BOOK NOW PAY LATER' placeholder="submit">
@@ -298,9 +296,14 @@ switch ($dataoption) {
 
 <!---- Calendar Popup Container ----->
 <!---- Calendar Popup Container End ----->   
-
-
-
+<script>
+  async function saveFile() {
+    let formData = new FormData();
+    formData.append("file", fileupload.files[0]);
+    await fetch('<?php echo get_template_directory_uri(); ?>/upload.php', {method: "POST", body: formData});
+    alert("done");
+  }
+</script>
 
 <script>
   jQuery(".chb").change(function() {
@@ -360,7 +363,6 @@ switch ($dataoption) {
             a.addEventListener("submit", function(e) {
                 e.preventDefault(), o();
                 var r = {
-                    cv: a.querySelector('[name="cv"]').value,
                     name: a.querySelector('[name="name"]').value,
                     email: a.querySelector('[name="email"]').value,
                     message: a.querySelector('[name="message"]').value,
@@ -371,9 +373,13 @@ switch ($dataoption) {
                     if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(r.email).toLowerCase()))
                         if (r.message) {
                             var t = a.dataset.url,
-                                s = new URLSearchParams(new FormData(a));
+
+                            s = new URLSearchParams(new FormData(a));
+                            s.append("file", cv.files[0]);
+      
                             a.querySelector(".js-form-submission").classList.add("show"), fetch(t, {
                                 method: "POST",
+
                                 body: s   
                             }).then(function(e) {
                                 return e.json()
@@ -391,10 +397,6 @@ switch ($dataoption) {
 }, {}, [1]);
 //# sourceMappingURL=form.js.map
 </script>
-
-
-
-
 
 
 
