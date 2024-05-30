@@ -17,15 +17,10 @@ Template Name: aaaaaaa
 Template Post Type: portfolio
 */
 get_header(); ?>
-
-
-
-
 <div id="aboutc"><div id="about">
 <h1 class="portfolio-title"><?php the_title(); ?></h1>
 <div id='main' class="portfolio-single-container">
 <div class="package-container">
-
 
  <?php /* The loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>

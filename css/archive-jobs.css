@@ -1,6 +1,35 @@
+.job-archive-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d6e9ee;
+    padding: 20px;
+}
+
+.search-input-button-group {
+    display: flex;
+}
+input#keyword {
+    border: 1px solid #0b6e89;
+    padding: 15px 30px;
+    width: 300px;
+    border-radius: 5px 0 0 5px;
+}
+button.archive-job-serach-button {
+    background: #0b6e89;
+    padding: 15px;
+    border: 1px solid #0b6e89;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+}
 .container-100 {
     background: #f3f7f0;
 }
+div#datafetch {
+    background: #bbb;
+    padding: 20px;
+}
+
 
 
 .portfolio-single-container {

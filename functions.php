@@ -11,9 +11,6 @@ include 'inc/extra-func.php';
 include 'inc/landing_page_setup.php';
 add_theme_support( 'title-tag' );
 
-
-
-
 function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 
@@ -39,6 +36,32 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
+add_action('wp_ajax_data_fetch' , 'data_fetch');
+add_action('wp_ajax_nopriv_data_fetch','data_fetch');
+
+function data_fetch() {
+    $query = new WP_Query( array( 'posts_per_page' => 20, 's' => esc_attr( $_POST['keyword'] ), 'post_type' => 'jobs' ) );
+    if( $query->have_posts() ) {
+        while( $query->have_posts() ) {
+          $query->the_post(); ?>
+
+              <div id="check-in-visitor">
+                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+              </div>
+        <?php
+        }
+        wp_reset_postdata();
+    }
+    else {
+        ?>
+              <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+              <div class="alert alert-info">
+                <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+              </div>
+    <?php
+    }
+  die();
+}
 
 function add_additional_class($classes, $item, $args){
   if(isset($args->add_li_class)){

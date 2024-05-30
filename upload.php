@@ -1,8 +1,11 @@
 <?php
 
+
+$upload_dir =  wp_upload_dir()['basedir'] ) . 'evaluation-uploads';
+wp_mkdir_p( $upload_dir );
+
 $filename = $_FILES['file']['name'];
-$upload_dir = wp_upload_dir();
-$location = $upload_dir['basedir'] . '/uploads/'.$filename;
+$location =  "upload/".$filename;
 
 if(move_uploaded_file($_FILES['file']['tmp_name'], $location) ){
   echo "sucess";
@@ -10,3 +13,4 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], $location) ){
   echo "failure";
 }
 ?>
+

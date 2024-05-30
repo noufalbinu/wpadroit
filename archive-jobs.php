@@ -2,12 +2,25 @@
 
 
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/themes.css"/>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/archive-jobs.css"/>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/page.css"/>
+
+
 
 <!-- MAIN -->
 <div class="container-100">
-  <h1 class="page-title">Our Companies</h1>
+  <div class="job-archive-banner-container">
+    <h1 class="page-title">FInd Job Openings</h1>
+    <div class="search-input-button-group">
+      <input type="text" name="keyword" id="keyword" onkeyup="fetchSearch()"></input>
+      <button class="archive-job-serach-button">Search Jobs</button>
+    </div> 
+  </div> 
+
   <div class="container-width-1100">
     <div id='main' class="portfolio-archive-container">
     <!--Gallary filter Links-->
@@ -23,9 +36,19 @@
 		</div>   
     <!--Gallary Images-->
       <div class="masonry">
-          <?php 
-          
-          if(have_posts()) : while(have_posts()) : the_post();
+      <div id="datafetch">Search results will appear here</div>
+        <?php 
+
+          // args
+          $args = array(
+            'post_type'    => 'jobs',
+            'posts_per_page' => '5',
+          );
+
+          // query
+          $the_query = new WP_Query( $args );
+
+          if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post();
             
             //wp theme CPT loop loaded by category taxonamy filter
             $categoriess = get_the_terms( get_the_ID(), 'category' );
@@ -39,6 +62,7 @@
                   <?php 
                 }
             }
+     
          endwhile; ?>
          </div>
         <div class="wpp-pagination">
@@ -80,5 +104,24 @@
     	 });
     }
   });
+
+function fetchSearch() {
+  var keyword = jQuery('#keyword').val();
+  if ( keyword ) {
+      jQuery.ajax({
+          url: '<?php echo admin_url('admin-ajax.php'); ?>',
+          type: 'post',
+          data: {
+            action: 'data_fetch',
+            keyword: keyword
+          },
+          success: function(data) {
+              jQuery('#datafetch').html( data );
+          }
+      });
+  } else {
+      jQuery('#datafetch').html( '' );
+  }
+}
 </script>
 <?php get_footer();?>
