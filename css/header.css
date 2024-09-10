@@ -42,8 +42,16 @@ p.notification-nav a {
     color: #0e6881;
     text-decoration: underline;
 }
+.header-cap {
+    display: flex;
+    background: #dff0ff;
+}
+.socialmedia-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 header {
-	background: #ffffff;
 	position: relative;
 	z-index: 5555;
 	}

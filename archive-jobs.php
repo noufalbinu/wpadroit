@@ -56,9 +56,19 @@
             if ( $categoriess && ! is_wp_error( $categoriess ) ) { 
                 foreach ( $categoriess as $categoryy ) {
                     // get_term_link requires taxonomy slug as the second parameter.
-                    ?><div class="gallery-item <?php echo $categoryy->term_id;  ?>">
-                           <a href="<?php the_permalink() ?>" rel="bookmark"><?php if( has_post_thumbnail() ) { the_post_thumbnail( 'medium_large' );  } ?><b><?php the_title(); ?></b></a>
+                    ?>
+                    <div class="gallery-item <?php echo $categoryy->term_id;  ?>">
+                      <div class="job-snippet">
+                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+                        <div class="job-snippet-wrap">                          
+                          <b><?php the_title(); ?></b>
+                          <div class="job-snippet-content">
+                            <p class='author-name'><b><?php the_author(); ?></b></p><?php echo get_the_date(); ?>
+                          </div>
+                        </div>
                       </div>
+                      <a href="<?php the_permalink() ?>" rel="bookmark">VIew more Details</a>
+                    </div>
                   <?php 
                 }
             }

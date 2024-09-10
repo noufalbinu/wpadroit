@@ -1,9 +1,31 @@
 footer.footer {
-    background: #f5f5f5;
+    background: #f1f1f1;
     display: flex;
     flex-direction: column;
 }
-
+.contact-cap-footer {
+    background: #182153;
+    color: #fff;
+}
+.contact-cap-footer-wrap {
+    padding:50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-cap-footer-wrap b {
+    font-size:22px;
+    padding:50px 0;
+}
+b.cap-footer-mobile {
+    font-size: 35px;
+    font-weight: 800;
+}
+.cta-footer-cap {
+    background: #ffffff;
+    color: #000000;
+    width: 200px;
+    margin: 0 !important;
+}
 div#footer-container {padding: 28px 0;}
 
 
@@ -62,7 +84,7 @@ div#footer-cap {
 .socialmedia-footer svg {
     width: 48px;
     padding: 12px;
-    fill: #163d3c;
+    fill: #182153;
 }
 
 /***FOOTER BOTTOM END***/

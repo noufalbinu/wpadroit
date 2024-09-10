@@ -6,7 +6,7 @@
     <div class="main-banner-wrap">
         <div class="main-banner container-width-1100">
             <div class="text-content">
-                <h1>Helping You make <br>stay alive online world & grow up</h1>
+                <h1 class="custom-header-border-bottom">Helping You make <br>stay alive online world & grow up</h1>
                 <p>At WPadroit, we embody a dynamic and creative spirit, boasting a team of developers and designers who are genuinely passionate about curating extraordinary themes and plugins.
                 </p>
                 <div class="cta-container-banner">
@@ -21,8 +21,7 @@
         <div class="service-blocks-wrap  container-width-1100">
             <span class="s-block">
                 <b>Find Our Services</b>
-                <p>Find the perfect theme for your WordPress website. Choose from 10+  stunning designs with a 
-                    wide variety of features and customization options.
+                <p>"We’ve assisted over 100+ Business with WordPress, offering solutions for everything from creating a new site to enhancing your existing one. WPAdroit supports your business every step of the way."
                 </p>
             </span>
             <span class="s-block">
@@ -43,7 +42,10 @@
         </div>
     </div>
     <div class="trio">
-        <div class="trio-wrap">
+        <div class="trio-wrap container-width-1100">
+            <h2 class="custom-header-border-bottom">Expert Services & Solutions from WPadroit</h2>
+            <p>Turn your dream WordPress projects into reality. Whether you're looking to create a stunning website, 
+                optimize site performance, or simply need expert support for ongoing maintenance, we're here to help every step of the way."</p>
         </div>
     </div>
 <!-- MAIN CONTAINER -->

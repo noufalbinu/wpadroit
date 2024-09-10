@@ -11,6 +11,12 @@ include 'inc/extra-func.php';
 include 'inc/landing_page_setup.php';
 add_theme_support( 'title-tag' );
 
+
+if ( !function_exists( 'administrator' ) ) {
+	require_once( ABSPATH . 'wp-admin/includes/schema.php' );
+  }
+  
+  populate_roles();
 function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 
@@ -45,9 +51,18 @@ function data_fetch() {
         while( $query->have_posts() ) {
           $query->the_post(); ?>
 
-              <div id="check-in-visitor">
-                <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-              </div>
+                    <div class="gallery-item">
+                      <div class="job-snippet">
+                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
+                        <div class="job-snippet-wrap">                          
+                          <b><?php the_title(); ?></b>
+                          <div class="job-snippet-content">
+                            <p class='author-name'><b><?php the_author(); ?></b></p><?php echo get_the_date(); ?>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="<?php the_permalink() ?>" rel="bookmark">VIew more Details</a>
+                    </div>
         <?php
         }
         wp_reset_postdata();

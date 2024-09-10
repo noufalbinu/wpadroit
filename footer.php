@@ -1,4 +1,18 @@
 <footer class="footer">
+  <div class="contact-cap-footer">
+    <div class="contact-cap-footer-wrap container-width-1100">
+      <div class="contact-cap-col">
+        <b>Do You want any Wordpress website related Help?</b>
+        <p>Contact Us to get more about our products & services </p>
+        <a class="cta cta-footer-cap" href="https://wpadroit.com">Contact</a>
+      </div>
+      <div class="contact-cap-col">
+        <p>Call Us:</p>
+        <b class="cap-footer-mobile">+91 9747 866 100</b>
+        
+      </div>
+    </div>
+  </div>
   <div class="footer-top">
   </div>
   <div class="wrap-footer-section container-width-1100">
