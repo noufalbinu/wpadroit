@@ -160,10 +160,11 @@ li.nav-item.arrow:hover {
 /* Navbar options (bg options) */
 
 .bg-primary .navbar-toggler, .bg-primary .nav-link, .bg-primary .utils-search {
-	color: #334533;
+	color: #ffffff;
 }
 .bg-primary .nav-link {
 }
+
 .bg-primary .nav-item:after {
 	background: #fff;
 }
@@ -295,6 +296,7 @@ li.nav-item.arrow:hover {
 }
 .nav-item .dropdown .nav-item:last-child {
 	border-radius: 0 0 7px 7px;
+	border: none !important;
 }
 .nav-item .dropdown .nav-item:first-child {
 	border-radius: 7px 0 0 0;
@@ -665,7 +667,7 @@ button.btn-search i {
   top: 25px;
   border-width: 0.4vmin 0.4vmin 0 0;
   border-style: solid;
-  border-color: #182153;
+  border-color: #FF5722;
   transition: 0.2s ease;
   display: block;
   transform-origin: 100% 0;
