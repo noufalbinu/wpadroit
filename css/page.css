@@ -1,5 +1,22 @@
+.main-banner {
+    background: #182153;
+}
+.main-banner-wrap {
+    background: #182153;
+    min-height: 250px;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.text-content h1 {
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 25px;
+}
 div#page-container {
-    display: block;
-    float: left;
-    padding: 30px 11%;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ececec;
 }

@@ -6,7 +6,7 @@
     <div class="main-banner-wrap">
         <div class="main-banner container-width-1100">
             <div class="text-content">
-                <h1 class="custom-header-border-bottom">Secure, high-performance WordPress solutions<br>Engineered for your business</h1>
+                <h1 class="custom-header-border-bottom">High-performance WordPress<br> solutions Engineered <br>for your business</h1>
                 <p>At WPadroit, we embody a dynamic and creative spirit, boasting a team of developers and designers who are genuinely passionate about curating extraordinary themes and plugins.
                 </p>
                 <div class="cta-container-banner">
