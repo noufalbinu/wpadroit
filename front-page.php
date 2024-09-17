@@ -48,6 +48,18 @@
                 optimize site performance, or simply need expert support for ongoing maintenance, we're here to help every step of the way."</p>
         </div>
     </div>
+    <div class="ahcm">
+        <div class="ahcm-wrap container-width-1100">
+            <div class="ahcm-text-content">
+               <h2 class="custom-header-border-bottom">AHCM: Your All-in-One HR Cloud Solution</h2>
+               <p>Cloud App + Wordress Plugin  Build solid HR Product for your company"</p>
+                   <a class="cta cta-ahcm cta-white" href="">Get more Details</a>
+            </div>
+            <div class="ahcm-module-preview">
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ahcm.png" alt="">
+            </div>
+        </div>
+    </div>
 <!-- MAIN CONTAINER -->
     <div id='main-container'>
         <div class="resources-container">
