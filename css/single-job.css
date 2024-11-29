@@ -1,17 +1,165 @@
+.careers-bnr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/careers-bg.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    color: #fff;
+    height: 343px;
+    justify-content: flex-end;
+}
+.job-archive-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #363734a8;
+    color: #fff;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0;
+}
+.careers-bnr-contents {
+    text-align: center;
+}
+.search-input-button-group {
+    display: flex;
+}
+input#keyword {
+    border: 1px solid #0b6e89;
+    border-right: 0;
+    padding: 15px 30px;
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+    height: 55px;
+}
+
 .job-post-content-sidebar-coatainer {
-    background: #f7f7f7;
-    padding: 29px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+.job-post-content-sidebar-coatainer-wrap {
+    width: 1100px;
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    gap: 40px;
 }
 .blog-container-wrap {margin: 0 auto;display: grid;grid-template-columns: auto auto;}
 .job-post-content {
-    border: 1px solid #cecdcd8c;
     border-radius: 5px;
-    padding: 30px;
     background: #fff;
-    width: 1100px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.job-sidebar {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 20px;
+    flex-direction: column;
+}
+.tags-bio {
+    border-bottom: 1px solid #bbb;
     margin-bottom: 30px;
-    margin-right: 18px;
-    margin: 0 auto;
+    padding: 20px 0 20px;
+}
+.tags-bio-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+p.sidebar-date {
+    margin: 0;
+}
+.job-cat a {
+    color: #000000;
+}
+.job-cat i {
+    color: #dd0000;
+    padding-right: 5px;
+}
+p.sidebar-date {
+    margin: 0;
+}
+.sidebar-date i {
+    padding-right: 5px;
+    color: #0c1130;
+}
+.job-cat-wrap {
+    display: flex;
+    align-items: center;
+}
+.job-cat-wrap p {
+    padding-left: 5px;
+    margin: 0;
+}
+
+.job-taxonomy {
+    display: flex;
+    gap: 10px;
+}
+.job-taxonomy span i, .job-cat-wrap i {
+    color: #0c1130;
+}
+.job-taxonomy span{
+    display: flex;
+    align-items: center;
+}
+.job-taxonomy span p{
+    padding-left:5px;
+    margin: 0;
+}
+.job-taxonomy span i{
+    padding-right: inherit;
+}
+ul.wp-block-list  {
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+ul.wp-block-list li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+ul.wp-block-list li::before {
+  content: "🡢 ";
+  color: #ff5722; /* or whatever color you prefer */
+  font-size: 15px;
+}
+
+.recent-jobs-sidebar {
+    border-radius: 10px;
+    order: 3;
+}
+.recent-jobs-sidebar ul {
+    padding-left: 20px;
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+.recent-jobs-sidebar ul li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+  line-height: 29px;
+}
+.recent-jobs-sidebar ul li::before {
+    content: "◍";
+    color: #0c112f;
+    font-size: 15px;
+}
+.recent-jobs-sidebar ul a{
+    color: #555;
+    padding-left: 13px;
+}
+.recent-jobs-sidebar h2 {
+    border-bottom: 1px solid #bcbcbc;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    color: #515151;
+    font-size: 18px;
 }
 .blog-post-sidebar-wrap {
     width: 400px;
@@ -177,4 +325,51 @@ span.float-right-replay img {
 ol.comment-list, ol.comment-list ul {
     list-style-type: none;
     padding: 0;
+}
+
+/*responsive*/
+@media(max-width: 991px) {
+	
+}
+
+@media(max-width: 767px) {
+	
+}
+@media screen and (max-width: 767px) {
+    .careers-bnr {
+        background-size: auto 152%;
+    }
+
+    .careers-bnr-contents h1 {
+        font-size: 22px;
+    }
+    .job-post-content-sidebar-coatainer-wrap {
+        width: 100%;
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+    .job-post-content {
+        padding: 20px;
+        width: 100%;
+    }
+    .job-sidebar {
+        margin-top: 0px;
+        gap: 0px;
+        align-items: center;
+    }
+    .tags-bio {
+        border-bottom: 1px solid #bbb;
+        border-radius: 0px;
+    }
+    .tags-bio-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+    .recent-jobs-sidebar {
+        border: none;
+        border-radius: 0px;
+        display: none;
+    }
 }

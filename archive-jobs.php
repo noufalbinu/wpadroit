@@ -4,9 +4,9 @@
 <?php get_header(); ?>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/base.css"/>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/archive-jobs.css"/>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/jobarchive-responsive.css"/>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/page.css"/>
 
 
@@ -16,8 +16,21 @@
   <div class="job-archive-banner-container">
     <h1 class="page-title">FInd Job Openings</h1>
     <div class="search-input-button-group">
+      <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+        
+        
+        
+            
+        
+        <input type="hidden" name="post_type" value="business" />
+      
+        
+
       <input type="text" name="keyword" id="keyword" onkeyup="fetchSearch()"></input>
+      <?php $location_args = array('taxonomy' => 'job-location', 'value_field' => 'slug', 'name' => 'location', 'show_option_none' => __( 'Select County' ),'option_none_value' => '0', 'order' => 'ASC', 'hide_empty' => 0); ?> 
+            <?php wp_dropdown_categories($location_args); ?>
       <button class="archive-job-serach-button">Search Jobs</button>
+      </form>
     </div> 
   </div> 
 
@@ -117,6 +130,7 @@
 
 function fetchSearch() {
   var keyword = jQuery('#keyword').val();
+  var Location = jQuery('#Location').val();
   if ( keyword ) {
       jQuery.ajax({
           url: '<?php echo admin_url('admin-ajax.php'); ?>',

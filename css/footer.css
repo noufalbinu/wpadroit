@@ -1,14 +1,13 @@
 footer.footer {
-    background: #0c112f;
+    background: #060816;
     display: flex;
     flex-direction: column;
 }
 .contact-cap-footer {
-    background: #0e153b;
+    background: #0a0e27;
     color: #fff;
     position:relative;
     width: 100%;
-    box-shadow: inset -5px -5px 13px 1px #081023;
 }
 .contact-cap-footer:after {
     position:absolute;
@@ -123,6 +122,7 @@ div#footer-cap {
     z-index: 1;
     position: relative;
     padding: 20px 0 3px;
+    background: #060816;
 }
 div#footer-cap p {
     color: #676767;

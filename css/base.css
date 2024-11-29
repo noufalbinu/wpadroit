@@ -10,12 +10,12 @@ body {
     background-color: #f8f8f8;
     width: 100%;
 }
-h1, h2, h3, h4, h5 {font-family: "Manrope", sans-serif;position: relative;padding-bottom: 18px;margin-bottom: 36px;}
+h1, h2, h3, h4, h5 {font-family: "Manrope", sans-serif;position: relative;}
 
 .custom-header-border-bottom:after {
     content: "";
     position: absolute;
-    background: #FF5722;
+    background: #412d8f;
     width: 19%;
     height: 3px;
     bottom: -9px;

@@ -10,7 +10,7 @@
 
   gtag('config', 'G-T6HM4G5YQ4');
 </script>
-   <title><?php wp_title(''); ?><?php if (!(is_404()) && (is_single()) || (is_page()) || (is_archive())) { ?> &raquo; <?php } ?> - <?php bloginfo('name'); ?></title>
+   <title><?php wp_title(''); ?><?php if (!(is_404()) && (is_single()) || (is_page()) || (is_archive())) ?> - <?php bloginfo('name'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,8 +36,6 @@
     <?php wp_enqueue_script('jquery'); ?>
     <?php wp_head(); ?>
     <!----- JS ------>	
-	
-	
 </head>
 <body>
 <div class="header-cap">
@@ -51,7 +49,7 @@
     <header>
 	    <div class="header-wrap container-width-1100">
             <div class="logo">
-               <a class="link-secondary" href="#">
+               <a class="link-secondary" href="<?php echo home_url();?>">
                   <img src="<?php header_image(); ?>" >
                </a>
             </div>
