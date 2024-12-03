@@ -42,41 +42,53 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-add_action('wp_ajax_data_fetch' , 'data_fetch');
-add_action('wp_ajax_nopriv_data_fetch','data_fetch');
+function fetch_posts() {
+    $keyword = isset($_POST['keyword']) ? sanitize_text_field($_POST['keyword']) : '';
+    $location = isset($_POST['location']) ? sanitize_text_field($_POST['location']) : '';
 
-function data_fetch() {
-    $query = new WP_Query( array( 'posts_per_page' => 20, 's' => esc_attr( $_POST['keyword'] ), 'post_type' => 'jobs' ) );
-    if( $query->have_posts() ) {
-        while( $query->have_posts() ) {
-          $query->the_post(); ?>
+    $args = [
+        'post_type'      => 'jobs',
+        'posts_per_page' => 5,
+    ];
 
-                    <div class="gallery-item">
-                      <div class="job-snippet">
-                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?>
-                        <div class="job-snippet-wrap">                          
-                          <b><?php the_title(); ?></b>
-                          <div class="job-snippet-content">
-                            <p class='author-name'><b><?php the_author(); ?></b></p><?php echo get_the_date(); ?>
-                          </div>
-                        </div>
-                      </div>
-                      <a href="<?php the_permalink() ?>" rel="bookmark">VIew more Details</a>
-                    </div>
-        <?php
+    // Add search keyword only if provided
+    if (!empty($keyword)) {
+        $args['s'] = $keyword;
+    }
+
+    // Add location taxonomy filter only if provided
+    if (!empty($location)) {
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'job-location',
+                'field'    => 'slug',
+                'terms'    => $location,
+            ]
+        ];
+    }
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            ?>
+            <div class="job-snippet">
+                <b><?php the_title(); ?></b>
+                <div><?php echo get_the_excerpt(); ?></div>
+                <a href="<?php the_permalink(); ?>">View More</a>
+            </div>
+            <?php
         }
-        wp_reset_postdata();
+    } else {
+        echo '<p>No posts found.</p>';
     }
-    else {
-        ?>
-              <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
-              <div class="alert alert-info">
-                <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
-              </div>
-    <?php
-    }
-  die();
+    wp_die();
 }
+add_action('wp_ajax_data_fetch', 'fetch_posts');
+add_action('wp_ajax_nopriv_data_fetch', 'fetch_posts');
+
+
 
 function add_additional_class($classes, $item, $args){
   if(isset($args->add_li_class)){

@@ -21,10 +21,11 @@
         <div class="service-blocks-cards">
             <h2>Find Our Services</h2>
             <div class="service-blocks-wrap  container-width-1100">
-                <span class="s-block">
+                <div class="s-block">
                     <p>"We’ve assisted over 100+ Business with WordPress, offering solutions for everything from creating a new site to enhancing your existing one. WPAdroit supports your business every step of the way."
                     </p>
-                </span>
+                    <a class="cta cta-services" href="">View All Services</a>
+                </div>
                 <span class="s-block">
                     <div class="s-icon-wrap">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
@@ -44,7 +45,7 @@
                     <b>Custom Wordpress Website</b>
                     <p>Building Custom themes & plugins for your business needs</p>
                 </span>
-                <span class="s-block">
+                <div class="s-block">
                     <div class="s-icon-wrap">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
                         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -59,8 +60,8 @@
                     </div>
                     <b>SEO</b>
                     <p>Boost visibility and drive traffic with expert SEO strategies.</p>
-                </span>
-                <span class="s-block">
+                </div>
+                <div class="s-block">
                     <div class="s-icon-wrap">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
                             <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -75,7 +76,7 @@
                     </div>
                     <b>Wordpress Website Maintenance</b>
                     <p>Secure, update, and optimize your WordPress site for seamless performance</p>
-                </span>
+                </div>
             </div>
         </div>
     </div>
@@ -92,6 +93,9 @@
     </div>
     <div class="ahcm">
         <div class="ahcm-wrap container-width-1100">
+            <div class="ahcm-module-preview">
+               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ahcm.png" alt="">
+            </div>
             <div class="ahcm-text-content">
                <h2 class="custom-header-border-bottom">AHCM: Your All-in-One HR Cloud Solution</h2>
                <p>Cloud App + Wordress Plugin Build solid HR Product for your company"</p>
@@ -103,9 +107,7 @@
                </ul>
                    <a class="cta cta-ahcm cta-white" href="">Get more Details</a>
             </div>
-            <div class="ahcm-module-preview">
-               <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ahcm.png" alt="">
-            </div>
+            
         </div>
     </div>
 
