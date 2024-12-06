@@ -4,7 +4,7 @@
       <div class="contact-cap-col">
         <b>Do You want any Wordpress website related Help?</b>
         <p>Contact Us to get more about our products & services </p>
-        <a class="cta cta-footer-cap" href="https://wpadroit.com">Contact</a>
+        <a class="cta cta-footer-cap" href="<?php echo home_url();?>/contact">Contact</a>
       </div>
       <div class="contact-cap-col">
         <p>Call Us:</p>
@@ -22,7 +22,7 @@
              <h3>Company</h3>
              <ul>
              <li><a href='/about'>About Us</a></li>
-             <li><a href='/careers'>Careers</a></li>
+             <li><a href='/jobs'>Careers</a></li>
              <li><a href='/contact'>Contact Us</a></li>
              <li><a href='/blog'>Blog</a></li>
              </ul>

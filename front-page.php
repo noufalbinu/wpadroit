@@ -10,8 +10,8 @@
                 <p>At WPadroit, we embody a dynamic and creative spirit, boasting a team of developers and designers who are genuinely passionate about curating extraordinary themes and plugins.
                 </p>
                 <div class="cta-container-banner">
-                    <a class="cta cta-banner-fp" href="https://crunchthemes.com">Services</a>
-                    <a class="cta cta-border-solid-fp" href="https://crunchthemes.com">Products</a>
+                    <a class="cta cta-banner-fp" href="<?php echo home_url();?>/services">Services</a>
+                    <a class="cta cta-border-solid-fp" href="<?php echo home_url();?>/products">Products</a>
                 </div>
             </div>
             <div class="bnr-container"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bnr.png" alt=""></div>
@@ -24,7 +24,7 @@
                 <div class="s-block">
                     <p>"We’ve assisted over 100+ Business with WordPress, offering solutions for everything from creating a new site to enhancing your existing one. WPAdroit supports your business every step of the way."
                     </p>
-                    <a class="cta cta-services" href="">View All Services</a>
+                    <a class="cta cta-services" href="<?php echo home_url();?>/services">View More Services</a>
                 </div>
                 <span class="s-block">
                     <div class="s-icon-wrap">
@@ -105,7 +105,7 @@
                 <li>Payroll Management</li>
                 <li>Employee Self-Service</li>
                </ul>
-                   <a class="cta cta-ahcm cta-white" href="">Get more Details</a>
+                   <a class="cta cta-ahcm cta-white" href="<?php echo home_url();?>/ahcm">Get more Details</a>
             </div>
             
         </div>

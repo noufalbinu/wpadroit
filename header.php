@@ -69,22 +69,22 @@
 		            		<a href="#" class="nav-link">SERVICES</a>
 		            		<ul class="dropdown">
 		            			<li class="nav-item">
-		            				<a href="/blog" class="nav-link">WORDPRESS WEBSITE DESIGN</a>
+		            				<a href="<?php echo home_url();?>/wordpress-website-design-development" class="nav-link">WORDPRESS WEBSITE DESIGN</a>
 		            			</li>
 		            			<li class="nav-item">
-		            				<a href="/documentai" class="nav-link">WORDPRESS MAINTENANCE</a>
+		            				<a href="<?php echo home_url();?>/wordpress-maintenance-and-support" class="nav-link">WORDPRESS MAINTENANCE</a>
 		            			</li>
 								<li class="nav-item">
-		            				<a href="/documentai" class="nav-link">WORDPRESS SPEED OPTIMIZATION</a>
+		            				<a href="<?php echo home_url();?>/wordpress-speed-optimization-services" class="nav-link">WORDPRESS SPEED OPTIMIZATION</a>
 		            			</li>
 								<li class="nav-item">
-		            				<a href="/documentai" class="nav-link">WORDPRESS SEO</a>
+		            				<a href="<?php echo home_url();?>/wordpress-seo" class="nav-link">WORDPRESS SEO</a>
 		            			</li>
 								<li class="nav-item">
-		            				<a href="/documentai" class="nav-link">MALWARE REMOVAL</a>
+		            				<a href="<?php echo home_url();?>/malware-removal-for-wordpress-websites" class="nav-link">MALWARE REMOVAL</a>
 		            			</li>
 								<li class="nav-item">
-		            				<a href="/documentai" class="nav-link">HACKED SITE REINSTATE</a>
+		            				<a href="<?php echo home_url();?>/wordpress-website-recovery" class="nav-link">HACKED SITE RECOVERY</a>
 		            			</li>
 								
 		            		</ul>
@@ -93,12 +93,12 @@
 		            		<a href="#" class="nav-link">PRODUCTS</a>
 		            		<ul class="dropdown">
 		            			<li class="nav-item">
-		            				<a href="/products/ahcm" class="nav-link">WordPress AHCM Module</a>
+		            				<a href="<?php echo home_url();?>/products/ahcm" class="nav-link">WordPress AHCM Module</a>
 		            			</li>
 		            		</ul>
 		            	</li>
 						<li class="nav-item">
-		            		<a href="#" class="nav-link contact-menu">CONTACT  </a>
+		            		<a href="<?php echo home_url();?>/contact" class="nav-link contact-menu">CONTACT  </a>
 		            	</li>			
 		            </ul>
 		    		<div class="navbar-utils">

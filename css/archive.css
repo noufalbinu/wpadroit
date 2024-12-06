@@ -1,20 +1,20 @@
 .blog-header {
-    background: #ecf3f5;
+    background: #0a0e27;
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 108px;
     margin-bottom: 30px;
     flex-direction: column;
-    border-top: 1px solid #c4c4c4;
-    color: #000;
+    color: #ffffff;
 }
 
 .blog-header h1 {
     line-height: 0;
     margin-bottom: 8px;
     padding-top: 30px;
-    color: #414141;
+    color: #ffffff;
     font-weight: 600;
     font-size: 24px;
 }
